@@ -2,11 +2,11 @@
 
 A 5-stage pipelined RISC-V processor synthesized onto a DE2-115 FPGA, with a custom JTAG UART loader that lets you push a new program onto the board without recompiling or reprogramming the FPGA every time. Built together with a teammate.
 
-![DE2-115 FPGA Board Running the Processor](image1.png)
+<img src="image1.png" alt="DE2-115 FPGA Board Running the Processor" width="400">
 
 ## Processor Architecture
 
-<img src="32-Bit RISC-V pipeline .png" alt="32-bit RISC-V Pipelined Processor Block Diagram" width="700">
+<img src="32-Bit_RISC-V_pipeline .png" alt="32-bit RISC-V Pipelined Processor Block Diagram" width="700">
 
 ## What this solves
 
@@ -17,7 +17,7 @@ Normally, testing a new program on real hardware means recompiling the whole des
 
 ## How it works
 
-![Program Load Flow](image2.png)
+<img src="image2.png" alt="Program Load Flow" width="450">
 
 - A Python script (`send_hex.py`) takes a compiled instruction hex file and streams it, 4 bytes at a time, over the JTAG cable using `nios2-terminal` (a generic JTAG UART tool that ships with Quartus — nothing to do with the Nios II processor itself).
 - On the FPGA side, a JTAG UART IP block receives the bytes. A small state machine (`uart_loader`) reassembles every 4 bytes into one 32-bit instruction and writes it straight into the processor's instruction memory.
@@ -50,7 +50,3 @@ Since the Python script can't see inside the FPGA, the board's LEDs are the real
 ## Current status
 
 The core load-and-run flow works — programs load over JTAG, the instruction count shows live on LEDR, and the board confirms a completed run. The part still in progress is MMIO: getting memory-mapped store data to actually display on the board's HEX0–7 displays. The signals needed for it are already exposed from the processor; wiring that last piece up is next.
-
-
-**Dhruv Patel**
-[GitHub](https://github.com/Dhruv-2801)
