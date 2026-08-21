@@ -1,4 +1,4 @@
-# RISC-V Pipelined Processor — FPGA + JTAG Program Loader
+# RISC-V Pipelined Processor — FPGA Wrapper
 
 A 5-stage pipelined RISC-V processor synthesized onto a DE2-115 FPGA, with a custom JTAG UART loader that lets you push a new program onto the board without recompiling or reprogramming the FPGA every time. Built together with a teammate.
 
