@@ -6,7 +6,7 @@ A 5-stage pipelined RISC-V processor synthesized onto a DE2-115 FPGA, with a cus
 
 ## Processor Architecture
 
-<img src="32-Bit_RISC-V_pipeline .png" alt="32-bit RISC-V Pipelined Processor Block Diagram" width="700">
+<img src="32-Bit RISC-V pipeline .png" alt="32-bit RISC-V Pipelined Processor Block Diagram" width="700">
 
 ## What this solves
 
