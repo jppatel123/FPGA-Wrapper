@@ -4,6 +4,10 @@ A 5-stage pipelined RISC-V processor synthesized onto a DE2-115 FPGA, with a cus
 
 ![DE2-115 FPGA Board Running the Processor](image1.png)
 
+## Processor Architecture
+
+<img src="32-Bit_RISC-V_pipeline_.png" alt="32-bit RISC-V Pipelined Processor Block Diagram" width="700">
+
 ## What this solves
 
 Normally, testing a new program on real hardware means recompiling the whole design in Quartus and reprogramming the FPGA — which takes a long time. This project adds a small piece of hardware that sits between the JTAG cable and the processor's instruction memory, so you can:
@@ -46,3 +50,7 @@ Since the Python script can't see inside the FPGA, the board's LEDs are the real
 ## Current status
 
 The core load-and-run flow works — programs load over JTAG, the instruction count shows live on LEDR, and the board confirms a completed run. The part still in progress is MMIO: getting memory-mapped store data to actually display on the board's HEX0–7 displays. The signals needed for it are already exposed from the processor; wiring that last piece up is next.
+
+
+**Dhruv Patel**
+[GitHub](https://github.com/Dhruv-2801)
