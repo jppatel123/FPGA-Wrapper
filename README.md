@@ -48,9 +48,9 @@ Since the Python script can't see inside the FPGA, the board's LEDs are the real
 | `DE2_115_riscv.qsf` | Quartus project settings/pin assignments for the DE2-115 |
 
 
-**Dhruv Patel**
-[GitHub](https://github.com/Dhruv-2801)
-
 ## Current status
 
 The core load-and-run flow works — programs load over JTAG, the instruction count shows live on LEDR, and the board confirms a completed run. The part still in progress is MMIO: getting memory-mapped store data to actually display on the board's HEX0–7 displays. The signals needed for it are already exposed from the processor; wiring that last piece up is next.
+
+**Dhruv Patel**
+[GitHub](https://github.com/Dhruv-2801)
